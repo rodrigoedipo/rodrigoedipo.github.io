@@ -3,59 +3,146 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rodrigo Édipo — pesquisa aplicada, estratégia e produção de conhecimento.">
+  <meta name="description" content="Rodrigo Édipo — pesquisa aplicada, estratégia e produção de conhecimento." id="page-description">
   <title>Rodrigo Édipo | Pesquisa e Consultoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:light;--ink:#222723;--muted:#505a53;--paper:#f8f7f2;--line:#cbd0c8;--accent:#234f40;--card:#fffefa;--button-text:#fff;--button-hover:#183a2e}
+    :root{color-scheme:light;--ink:#222723;--muted:#505a53;--paper:#f8f7f2;--line:#cbd0c8;--accent:#234f40;--card:#fffefa;--button-text:#fff;--button-hover:#183a2e;--font-heading:"Space Grotesk",Arial,sans-serif;--font-body:"Plus Jakarta Sans",Arial,sans-serif}
     @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--ink:#f4f4f1;--muted:#c3cbc5;--paper:#000;--line:#555;--accent:#b9e8ce;--card:#141714;--button-text:#092015;--button-hover:#d4f5e3}}
     :root[data-theme="dark"]{color-scheme:dark;--ink:#f4f4f1;--muted:#c3cbc5;--paper:#000;--line:#555;--accent:#b9e8ce;--card:#141714;--button-text:#092015;--button-hover:#d4f5e3}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.65}
     .wrap{width:min(100% - 44px,880px);margin:auto}header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--line)}
-    .brand{font-size:19px;font-weight:700;letter-spacing:-.035em}nav a{color:var(--muted);font-size:13px;text-decoration:none;margin-left:20px}nav a:hover,a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.skip-link{position:absolute;left:12px;top:-100px;background:var(--card);color:var(--ink);padding:10px 14px;z-index:5}.skip-link:focus{top:12px}.header-actions{display:flex;align-items:center;gap:16px}.theme-toggle{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:3px;cursor:pointer}.theme-toggle:hover{border-color:var(--accent)}
-    .hero{padding:105px 0 110px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.055em;font-size:clamp(44px,7vw,76px);line-height:1.08;max-width:800px;margin:22px 0 24px}.lead{font-size:19px;max-width:620px;color:var(--muted);margin:0 0 30px}
+    .brand{font-family:var(--font-heading);font-size:19px;font-weight:700;letter-spacing:-.035em}nav a{color:var(--muted);font-size:13px;text-decoration:none;margin-left:20px}nav a:hover,a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.skip-link{position:absolute;left:12px;top:-100px;background:var(--card);color:var(--ink);padding:10px 14px;z-index:5}.skip-link:focus{top:12px}.header-actions{display:flex;align-items:center;gap:16px}.language-toggle{display:flex;gap:2px;border:1px solid var(--line);border-radius:3px;padding:2px}.language-toggle button{border:0;background:transparent;color:var(--muted);padding:6px 8px;font:inherit;font-size:13px;cursor:pointer}.language-toggle button[aria-pressed="true"]{background:var(--accent);color:var(--button-text);font-weight:700}.theme-toggle{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:3px;cursor:pointer}.theme-toggle:hover{border-color:var(--accent)}
+    .hero{padding:105px 0 110px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}h1{font-family:var(--font-heading);font-weight:600;letter-spacing:-.055em;font-size:clamp(44px,7vw,76px);line-height:1.08;max-width:800px;margin:22px 0 24px}.lead{font-size:19px;max-width:620px;color:var(--muted);margin:0 0 30px}
     .cta{display:inline-block;background:var(--accent);color:var(--button-text);padding:12px 20px;text-decoration:none;font-size:14px;font-weight:700;border-radius:3px}.cta:hover{text-decoration:none;background:var(--button-hover)}
-    section{border-top:1px solid var(--line);padding:48px 0 60px}h2{font-size:14px;text-transform:uppercase;letter-spacing:.13em;margin:0 0 25px}p{max-width:700px;color:var(--muted)}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.service{border:1px solid var(--line);padding:23px;font-size:17px;background:var(--card)}.contact a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:12px}
+    section{border-top:1px solid var(--line);padding:48px 0 60px}h2{font-family:var(--font-heading);font-size:14px;text-transform:uppercase;letter-spacing:.13em;margin:0 0 25px}p{max-width:700px;color:var(--muted)}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.service{font-family:var(--font-heading);font-weight:500;border:1px solid var(--line);padding:23px;font-size:17px;background:var(--card)}.contact a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:12px}
     @media(max-width:600px){header{align-items:flex-start;gap:15px;flex-wrap:wrap}.header-actions{flex-wrap:wrap;justify-content:flex-end;gap:10px}nav a{margin-left:10px;font-size:12px}.hero{padding:70px 0 80px}.lead{font-size:17px}.services{grid-template-columns:1fr}section{padding:38px 0 46px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<a class="skip-link" href="#conteudo" data-i18n="skip">Pular para o conteúdo principal</a>
 <div class="wrap">
-  <header><div class="brand">Rodrigo Édipo</div><div class="header-actions"><nav aria-label="Navegação principal"><a href="#servicos">Atuação</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">Fundo preto</button></div></header>
+  <header><div class="brand">Rodrigo Édipo</div><div class="header-actions"><nav aria-label="Navegação principal" id="main-nav"><a href="#servicos" data-i18n="navServices">Atuação</a><a href="#sobre" data-i18n="navAbout">Sobre</a><a href="#contato" data-i18n="navContact">Contato</a></nav><div class="language-toggle" role="group" aria-label="Idioma / Language"><button type="button" id="lang-pt" lang="pt-BR" aria-pressed="true" aria-label="Português">PT</button><button type="button" id="lang-en" lang="en" aria-pressed="false" aria-label="English">EN</button></div><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">Fundo preto</button></div></header>
   <main id="conteudo">
-    <div class="hero"><div class="eyebrow">Pesquisa · Estratégia · Conhecimento</div><h1>Pesquisa para compreender pessoas, contextos e experiências.</h1><p class="lead">Atuo com pesquisa aplicada, experiência do usuário, investigação qualitativa e produção de conhecimento para organizações e projetos.</p><a class="cta" href="mailto:rodrigoedipo.consultoria@gmail.com">Entre em contato ↗</a></div>
-    <section id="servicos"><h2>O que faço</h2><div class="services"><div class="service">Pesquisa qualitativa</div><div class="service">UX Research</div><div class="service">Estudos e diagnósticos</div><div class="service">Relatórios e publicações</div></div></section>
-    <section id="sobre"><h2>Sobre</h2><p>Sou doutor em Psicologia Cognitiva pela UFPE, com mestrado em estudos de mídia e linguagem e formação em Comunicação. Minha trajetória reúne pesquisa, design, inovação e projetos de interesse público. Trabalho na transformação de perguntas complexas em conhecimento útil para decisões e iniciativas.</p></section>
-    <section id="contato" class="contact"><h2>Contato</h2><p>Para conversar sobre projetos e colaborações:</p><a href="mailto:rodrigoedipo.consultoria@gmail.com">rodrigoedipo.consultoria@gmail.com</a></section>
+    <div class="hero"><div class="eyebrow" data-i18n="eyebrow">Pesquisa · Estratégia · Conhecimento</div><h1 data-i18n="headline">Pesquisa para compreender pessoas, contextos e experiências.</h1><p class="lead" data-i18n="lead">Atuo com pesquisa qualitativa e quantitativa, estratégia para produtos digitais, pesquisa de mercado e tendências e produção de estudos institucionais.</p><a class="cta" href="mailto:rodrigoedipo.consultoria@gmail.com" data-i18n="cta">Entre em contato ↗</a></div>
+    <section id="servicos"><h2 data-i18n="servicesTitle">O que faço</h2><div class="services"><div class="service" data-i18n="service1">Pesquisa qualitativa e quantitativa</div><div class="service" data-i18n="service2">Estratégia para produtos digitais</div><div class="service" data-i18n="service3">Pesquisa de mercado e tendências</div><div class="service" data-i18n="service4">Estudos, diagnósticos e relatórios institucionais</div></div></section>
+    <section id="sobre"><h2 data-i18n="aboutTitle">Sobre</h2><p data-i18n="bio1">Sou doutor em Psicologia Cognitiva pela Universidade Federal de Pernambuco (UFPE), com período de pesquisa na Universidade de Lisboa (ULisboa), mestre em Estudos de Mídia e Linguagem também pela UFPE e graduado em Comunicação, com habilitação em Publicidade e Propaganda pela AESO – Faculdades Integradas Barros Melo.</p><p data-i18n="bio2">Minha trajetória combina pesquisa qualitativa e quantitativa, design thinking, inovação, comunicação institucional e docência. Tenho experiência em projetos que investigam comportamentos, experiências e relações entre pessoas e seus contextos, com especial interesse pelo cuidado e pela atenção, meus atuais objetos de investigação acadêmica.</p><p data-i18n="bio3">Atuo na produção de estudos, diagnósticos e conhecimentos que apoiam decisões estratégicas, políticas e iniciativas institucionais.</p></section>
+    <section id="contato" class="contact"><h2 data-i18n="contactTitle">Contato</h2><p data-i18n="contactLead">Para conversar sobre projetos e colaborações:</p><a href="mailto:rodrigoedipo.consultoria@gmail.com">rodrigoedipo.consultoria@gmail.com</a></section>
   </main>
-  <footer>© 2026 Rodrigo Édipo · Olinda, PE · Atuação remota</footer>
+  <footer data-i18n="footer">© 2026 Rodrigo Édipo · Olinda, PE · Atuação remota</footer>
 </div>
 <script>
   (function () {
+    const strings = {
+    "pt": {
+        "skip": "Pular para o conteúdo principal",
+        "navServices": "Atuação",
+        "navAbout": "Sobre",
+        "navContact": "Contato",
+        "eyebrow": "Pesquisa · Estratégia · Conhecimento",
+        "headline": "Pesquisa para compreender pessoas, contextos e experiências.",
+        "lead": "Atuo com pesquisa qualitativa e quantitativa, estratégia para produtos digitais, pesquisa de mercado e tendências e produção de estudos institucionais.",
+        "cta": "Entre em contato ↗",
+        "servicesTitle": "O que faço",
+        "service1": "Pesquisa qualitativa e quantitativa",
+        "service2": "Estratégia para produtos digitais",
+        "service3": "Pesquisa de mercado e tendências",
+        "service4": "Estudos, diagnósticos e relatórios institucionais",
+        "aboutTitle": "Sobre",
+        "bio1": "Sou doutor em Psicologia Cognitiva pela Universidade Federal de Pernambuco (UFPE), com período de pesquisa na Universidade de Lisboa (ULisboa), mestre em Estudos de Mídia e Linguagem também pela UFPE e graduado em Comunicação, com habilitação em Publicidade e Propaganda pela AESO – Faculdades Integradas Barros Melo.",
+        "bio2": "Minha trajetória combina pesquisa qualitativa e quantitativa, design thinking, inovação, comunicação institucional e docência. Tenho experiência em projetos que investigam comportamentos, experiências e relações entre pessoas e seus contextos, com especial interesse pelo cuidado e pela atenção, meus atuais objetos de investigação acadêmica.",
+        "bio3": "Atuo na produção de estudos, diagnósticos e conhecimentos que apoiam decisões estratégicas, políticas e iniciativas institucionais.",
+        "contactTitle": "Contato",
+        "contactLead": "Para conversar sobre projetos e colaborações:",
+        "footer": "© 2026 Rodrigo Édipo · Olinda, PE · Atuação remota",
+        "title": "Rodrigo Édipo | Pesquisa e Consultoria",
+        "description": "Rodrigo Édipo — pesquisa aplicada, estratégia e produção de conhecimento.",
+        "dark": "Fundo preto",
+        "light": "Fundo claro",
+        "darkAria": "Ativar modo escuro",
+        "lightAria": "Ativar modo claro",
+        "navAria": "Navegação principal",
+        "fontLabel": "Fonte",
+        "fontAria": "Escolher fonte"
+    },
+    "en": {
+        "skip": "Skip to main content",
+        "navServices": "Expertise",
+        "navAbout": "About",
+        "navContact": "Contact",
+        "eyebrow": "Research · Strategy · Knowledge",
+        "headline": "Research to understand people, contexts, and experiences.",
+        "lead": "I work across qualitative and quantitative research, digital product strategy, market and trends research, and institutional studies.",
+        "cta": "Get in touch ↗",
+        "servicesTitle": "What I do",
+        "service1": "Qualitative and quantitative research",
+        "service2": "Digital product strategy",
+        "service3": "Market and trends research",
+        "service4": "Institutional studies, assessments, and reports",
+        "aboutTitle": "About",
+        "bio1": "I hold a PhD in Cognitive Psychology from the Federal University of Pernambuco (UFPE), including a research period at the University of Lisbon (ULisboa), a master’s degree in Media and Language Studies from UFPE, and a degree in Communication, specializing in Advertising from AESO – Faculdades Integradas Barros Melo.",
+        "bio2": "My professional experience combines qualitative and quantitative research, design thinking, innovation, institutional communications, and teaching. I have worked on projects exploring behavior, experiences, and relationships between people and their contexts, with a particular interest in care and attention, my current areas of academic research.",
+        "bio3": "I produce studies, assessments, and evidence-based insights to inform strategic decisions, policies, and institutional initiatives.",
+        "contactTitle": "Contact",
+        "contactLead": "For project inquiries and collaborations:",
+        "footer": "© 2026 Rodrigo Édipo · Olinda, Brazil · Available for remote work",
+        "title": "Rodrigo Édipo | Research and Consulting",
+        "description": "Rodrigo Édipo — applied research, strategy, and knowledge creation.",
+        "dark": "Dark background",
+        "light": "Light background",
+        "darkAria": "Switch to dark mode",
+        "lightAria": "Switch to light mode",
+        "navAria": "Main navigation",
+        "fontLabel": "Font",
+        "fontAria": "Choose font"
+    }
+};
     const root = document.documentElement;
     const button = document.getElementById('theme-toggle');
     const preference = window.matchMedia('(prefers-color-scheme: dark)');
-    let selected = null;
-    try { selected = localStorage.getItem('rodrigoedipo-theme'); } catch (error) { /* armazenamento opcional */ }
-    if (selected === 'dark' || selected === 'light') root.dataset.theme = selected;
+    let theme = null, language = 'pt';
+    try {
+      theme = localStorage.getItem('rodrigoedipo-theme');
+      if (localStorage.getItem('rodrigoedipo-language') === 'en') language = 'en';
+    } catch (error) { /* Persistência opcional */ }
+    if (theme === 'dark' || theme === 'light') root.dataset.theme = theme;
     function isDark() {
       return root.dataset.theme === 'dark' || (!root.dataset.theme && preference.matches);
     }
-    function updateButton() {
-      const dark = isDark();
-      button.textContent = dark ? 'Fundo claro' : 'Fundo preto';
-      button.setAttribute('aria-label', dark ? 'Ativar modo claro' : 'Ativar modo escuro');
+    function updateThemeButton() {
+      const dark = isDark(), words = strings[language];
+      button.textContent = dark ? words.light : words.dark;
+      button.setAttribute('aria-label', dark ? words.lightAria : words.darkAria);
       button.setAttribute('aria-pressed', String(dark));
+    }
+    function setLanguage(next) {
+      language = next;
+      const words = strings[language];
+      root.lang = next === 'pt' ? 'pt-BR' : 'en';
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        el.textContent = words[el.dataset.i18n];
+      });
+      document.getElementById('main-nav').setAttribute('aria-label', words.navAria);
+      document.title = words.title;
+      document.getElementById('page-description').setAttribute('content', words.description);
+      document.getElementById('lang-pt').setAttribute('aria-pressed', String(next === 'pt'));
+      document.getElementById('lang-en').setAttribute('aria-pressed', String(next === 'en'));
+      updateThemeButton();
+      try { localStorage.setItem('rodrigoedipo-language', next); } catch (error) { /* opcional */ }
     }
     button.addEventListener('click', function () {
       const next = isDark() ? 'light' : 'dark';
       root.dataset.theme = next;
-      try { localStorage.setItem('rodrigoedipo-theme', next); } catch (error) { /* armazenamento opcional */ }
-      updateButton();
+      try { localStorage.setItem('rodrigoedipo-theme', next); } catch (error) { /* opcional */ }
+      updateThemeButton();
     });
-    if (preference.addEventListener) preference.addEventListener('change', updateButton);
-    updateButton();
+    document.getElementById('lang-pt').addEventListener('click', function () { setLanguage('pt'); });
+    document.getElementById('lang-en').addEventListener('click', function () { setLanguage('en'); });
+    if (preference.addEventListener) preference.addEventListener('change', updateThemeButton);
+    setLanguage(language);
   }());
 </script>
 </body>
