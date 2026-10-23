@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rodrigo Édipo — pesquisa aplicada, estratégia e produção de conhecimento.">
+  <title>Rodrigo Édipo | Pesquisa e Consultoria</title>
+  <style>
+    :root{color-scheme:light;--ink:#222723;--muted:#505a53;--paper:#f8f7f2;--line:#cbd0c8;--accent:#234f40;--card:#fffefa;--button-text:#fff;--button-hover:#183a2e}
+    @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--ink:#f4f4f1;--muted:#c3cbc5;--paper:#000;--line:#555;--accent:#b9e8ce;--card:#141714;--button-text:#092015;--button-hover:#d4f5e3}}
+    :root[data-theme="dark"]{color-scheme:dark;--ink:#f4f4f1;--muted:#c3cbc5;--paper:#000;--line:#555;--accent:#b9e8ce;--card:#141714;--button-text:#092015;--button-hover:#d4f5e3}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    .wrap{width:min(100% - 44px,880px);margin:auto}header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--line)}
+    .brand{font-size:19px;font-weight:700;letter-spacing:-.035em}nav a{color:var(--muted);font-size:13px;text-decoration:none;margin-left:20px}nav a:hover,a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.skip-link{position:absolute;left:12px;top:-100px;background:var(--card);color:var(--ink);padding:10px 14px;z-index:5}.skip-link:focus{top:12px}.header-actions{display:flex;align-items:center;gap:16px}.theme-toggle{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:3px;cursor:pointer}.theme-toggle:hover{border-color:var(--accent)}
+    .hero{padding:105px 0 110px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.055em;font-size:clamp(44px,7vw,76px);line-height:1.08;max-width:800px;margin:22px 0 24px}.lead{font-size:19px;max-width:620px;color:var(--muted);margin:0 0 30px}
+    .cta{display:inline-block;background:var(--accent);color:var(--button-text);padding:12px 20px;text-decoration:none;font-size:14px;font-weight:700;border-radius:3px}.cta:hover{text-decoration:none;background:var(--button-hover)}
+    section{border-top:1px solid var(--line);padding:48px 0 60px}h2{font-size:14px;text-transform:uppercase;letter-spacing:.13em;margin:0 0 25px}p{max-width:700px;color:var(--muted)}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.service{border:1px solid var(--line);padding:23px;font-size:17px;background:var(--card)}.contact a{color:var(--accent);font-weight:700;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:12px}
+    @media(max-width:600px){header{align-items:flex-start;gap:15px;flex-wrap:wrap}.header-actions{flex-wrap:wrap;justify-content:flex-end;gap:10px}nav a{margin-left:10px;font-size:12px}.hero{padding:70px 0 80px}.lead{font-size:17px}.services{grid-template-columns:1fr}section{padding:38px 0 46px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<div class="wrap">
+  <header><div class="brand">Rodrigo Édipo</div><div class="header-actions"><nav aria-label="Navegação principal"><a href="#servicos">Atuação</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">Fundo preto</button></div></header>
+  <main id="conteudo">
+    <div class="hero"><div class="eyebrow">Pesquisa · Estratégia · Conhecimento</div><h1>Pesquisa para compreender pessoas, contextos e experiências.</h1><p class="lead">Atuo com pesquisa aplicada, experiência do usuário, investigação qualitativa e produção de conhecimento para organizações e projetos.</p><a class="cta" href="mailto:rodrigoedipo.consultoria@gmail.com">Entre em contato ↗</a></div>
+    <section id="servicos"><h2>O que faço</h2><div class="services"><div class="service">Pesquisa qualitativa</div><div class="service">UX Research</div><div class="service">Estudos e diagnósticos</div><div class="service">Relatórios e publicações</div></div></section>
+    <section id="sobre"><h2>Sobre</h2><p>Sou doutor em Psicologia Cognitiva pela UFPE, com mestrado em estudos de mídia e linguagem e formação em Comunicação. Minha trajetória reúne pesquisa, design, inovação e projetos de interesse público. Trabalho na transformação de perguntas complexas em conhecimento útil para decisões e iniciativas.</p></section>
+    <section id="contato" class="contact"><h2>Contato</h2><p>Para conversar sobre projetos e colaborações:</p><a href="mailto:rodrigoedipo.consultoria@gmail.com">rodrigoedipo.consultoria@gmail.com</a></section>
+  </main>
+  <footer>© 2026 Rodrigo Édipo · Olinda, PE · Atuação remota</footer>
+</div>
+<script>
+  (function () {
+    const root = document.documentElement;
+    const button = document.getElementById('theme-toggle');
+    const preference = window.matchMedia('(prefers-color-scheme: dark)');
+    let selected = null;
+    try { selected = localStorage.getItem('rodrigoedipo-theme'); } catch (error) { /* armazenamento opcional */ }
+    if (selected === 'dark' || selected === 'light') root.dataset.theme = selected;
+    function isDark() {
+      return root.dataset.theme === 'dark' || (!root.dataset.theme && preference.matches);
+    }
+    function updateButton() {
+      const dark = isDark();
+      button.textContent = dark ? 'Fundo claro' : 'Fundo preto';
+      button.setAttribute('aria-label', dark ? 'Ativar modo claro' : 'Ativar modo escuro');
+      button.setAttribute('aria-pressed', String(dark));
+    }
+    button.addEventListener('click', function () {
+      const next = isDark() ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('rodrigoedipo-theme', next); } catch (error) { /* armazenamento opcional */ }
+      updateButton();
+    });
+    if (preference.addEventListener) preference.addEventListener('change', updateButton);
+    updateButton();
+  }());
+</script>
+</body>
+</html>
